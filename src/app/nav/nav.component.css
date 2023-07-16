@@ -181,6 +181,11 @@ a.bottom-nav-links:hover::before {
 }
   /* large phone  */
   @media screen and (max-width: 425px){
+
+    .bottom-nav{
+      background-color: #ffffff;
+    }
+
     .bottom-nav-links{
       font-size: 0.8rem;
     }

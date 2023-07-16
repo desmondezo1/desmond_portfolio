@@ -4,6 +4,7 @@
   scroll-snap-type: y proximity;
   /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
+  margin-bottom: 80px;
 }
 
 .section  {
@@ -34,6 +35,10 @@
 .about-me-h1 {
   margin: 20px 0;
   color: #0141ae;
+}
+
+p{
+  margin-bottom: 18px;
 }
 
 .skills {
