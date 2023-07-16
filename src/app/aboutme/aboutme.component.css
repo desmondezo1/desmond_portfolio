@@ -261,9 +261,9 @@ div.img {
     justify-content: space-evenly;
     grid-template:
         ". about ."
-        ". image ."
         ". skills ."
-        ". skills .";
+        ". skills ." 
+        ". image .";
   }
 
   .img{
