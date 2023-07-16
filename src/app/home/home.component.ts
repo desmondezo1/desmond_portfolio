@@ -10,34 +10,8 @@ export class HomeComponent implements AfterViewInit {
 anime: any
 
 
-constructor() {
-}
+  constructor() {}
 
-  //  ngAfterViewInit(): void {
-  //   let tl = anime.timeline({
-  //       easing: 'easeOutExpo',
-  //       duration: 1000
-  //     });
-
-  //     tl.add({
-  //       targets: [".hi",".desmond",".creative",".designer","h2"],
-  //    opacity: 0
-  //     }).add({
-  //    targets: ".hi",
-  //    opacity: 1
-  //   }).add({
-  //     targets: ".desmond",
-  //     opacity: 1
-  //   }).add({
-  //     delay: 1500,
-  //     targets:[".creative","h2"],
-  //     opacity: 1
-  //   }).add({
-  //     targets:[".designer","h2"],
-  //     opacity: 1
-  //   })
-
-  //  }
 
   ngAfterViewInit(): void {
     const tl = anime.timeline({
@@ -54,28 +28,6 @@ constructor() {
       opacity: [0, 1],
       translateY: [-20, 0]
     })
-    // .add({
-    //   delay: 1500,
-    //   targets: '.creative, .designer, h2',
-    //   opacity: [0, 1],
-    //   translateY: [-20, 0],
-    //   offset: '-=500' // Delay the animation by 500ms compared to the previous keyframe
-    // });
-
-    // .add({
-    //   targets: '.creative',
-    //   opacity: [0, 1],
-    //   translateX: [-20, 0]
-    // }).add({
-    //   targets: '.designer',
-    //   opacity: [0, 1],
-    //   translateX: [-20, 0]
-    // }).add({
-    //   targets: 'h2',
-    //   opacity: [0, 1],
-    //   translateX: [-20, 0],
-    //   offset: '-=500' // Delay the animation by 500ms compared to the previous keyframe
-    // });
     .add({
       delay: 1800,
       targets: '.creative',
@@ -87,12 +39,7 @@ constructor() {
       translateY: [-20, 0],
       offset: '-=500' // Delay the animation by 500ms compared to the previous keyframe
     });
-    // .add({
-    //   targets: 'h2',
-    //   opacity: [0, 1],
-    //   translateY: [-20, 0],
-    //   offset: '-=500' // Delay the animation by 500ms compared to the previous keyframe
-    // });
+   
   }
 
   }
