@@ -8,7 +8,7 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements AfterViewInit {
-  private loc!: string;
+  public loc!: string;
   constructor(
     public router : Router
     ) {
