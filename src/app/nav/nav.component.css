@@ -1,0 +1,211 @@
+*:hover{
+  cursor: url('../../assets/img/vector.svg'), pointer;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  /* padding: 20px 40px; */
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  z-index: 5;
+  padding: 20px 40px;
+}
+
+.nav img.logo {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+
+.nav .email-link > img {
+  height: 30px;
+  width: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 13px 24px -3px rgba(0, 0, 0, 0.25);
+  transition: transform 1s ease, box-shadow 1s ease;
+}
+
+
+.nav > .email-link > img.email:hover {
+  box-shadow: 0px 4px 20px 10px rgb(165 165 165 / 24%),
+    0px 13px 24px -3px rgb(0 0 0 / 11%);
+  transform: scale(1.1);
+}
+
+/* social icons side nav */
+.social-icons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0 10px 10px 0;
+  top: 25%;
+  left: 0;
+  padding: 20px 10px;
+  width: 50px;
+  box-shadow: 0 0 17px -5px #c4c4c4, 0 0 17px -12px #c4c4c4;
+  height: 40vh;
+  position: fixed;
+  z-index: 5;
+}
+
+.github,
+.codepen,
+.dribbble {
+  height: 20px;
+  transition: all 1s ease;
+}
+
+.bottom-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+
+  /* padding: 10px 10px 20px 10px;
+  background-color: red; */
+}
+
+.bottom-nav-links {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 41px;
+  color: #b6d1ff;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 1s ease;
+}
+
+a.bottom-nav-links::before {
+  content: "";
+  height: 60px;
+  width: 15px;
+  transform: translateX(-150%) rotate(45deg);
+  transform-origin: top;
+  transition: transform 0.5s ease;
+  position: absolute;
+  background: #ffffff;
+  border: 5px solid #ffffff;
+
+  border-radius: 2px;
+}
+
+/* hover bottom nav links  */
+
+.bottom-nav:hover a.bottom-nav-links {
+  color: #015af4;
+}
+a.bottom-nav-links:hover::before {
+  transform: translateX(550%) rotate(45deg);
+}
+
+.bottom-nav a.active {
+  color: #015af4;
+}
+
+.github:hover,
+.codepen:hover,
+.dribbble:hover {
+  transform: rotate(360deg) scale(1.5);
+}
+
+/* ANIMATION */
+
+.nav {
+  animation-name: hideNav;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-direction: reverse;
+  animation-delay: 3.5s;
+}
+.social-icons {
+  animation-name: social-icons;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-direction: reverse;
+  animation-delay: 3.5s;
+}
+.bottom-nav {
+  animation-name: bottom-nav;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-direction: reverse;
+  animation-delay: 3.5s;
+}
+@keyframes hideNav {
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes social-icons {
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes bottom-nav {
+  to {
+    transform: translateY(100px);
+  }
+}
+
+
+/* tablet mode  */
+
+@media screen and (min-width: 426px) and (max-width: 1024px){
+}
+  /* large phone  */
+  @media screen and (max-width: 425px){
+    .bottom-nav-links{
+      font-size: 0.8rem;
+    }
+
+
+    .nav img.email {
+      height: 25px;
+    }
+
+    .social-icons{
+      display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    flex-direction: row;
+    border-radius: 0 10px 10px 0;
+    top: 66%;
+    left: 37px;
+    margin-top: 15px;
+    padding: 20px 10px;
+    width: 50px;
+    box-shadow: 0 0 0 0 black;
+    height: 5vh;
+    width: 40vw;
+    position: fixed;
+    z-index: 5;
+    }
+
+    @keyframes social-icons {
+      to {
+        transform: translateX(-200px);
+      }
+    }
+  }

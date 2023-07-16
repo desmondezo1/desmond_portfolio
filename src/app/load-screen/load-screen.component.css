@@ -1,0 +1,127 @@
+.main {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.circle-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-1::before {
+  content: "";
+  width: 100px;
+  border-radius: 50%;
+  background: linear-gradient(
+    126.71deg,
+    #405fcd -1.45%,
+    #00f763 46.66%,
+    #015af4 106.82%,
+    rgba(1, 90, 244, 0.557292) 121.25%,
+    rgba(1, 90, 244, 0) 137.33%
+  );
+  height: 100px;
+  position: absolute;
+  transition: all 2s ease;
+  z-index: 1;
+  animation-name: circle-scale-animation;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+
+.circle-1::after {
+  content: "";
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgb(241, 241, 241);
+  height: 50px;
+  position: absolute;
+  z-index: 2;
+  animation-name: circle-scale-animation;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+
+.img {
+  background: url("../../assets/img/img48kb.jpg");
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 3;
+  animation-name: image-rotate;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+
+.progress_ring {
+  stroke-dasharray: 10 20;
+}
+.prog_ring_circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* ANIMATION KEY FRAMES */
+
+@keyframes circle-scale-animation {
+  0% {
+    transform: scale(0);
+  }
+
+  90% {
+    transform: scale(50);
+    background: linear-gradient(
+      136.97deg,
+      #405fcd -2.26%,
+      #015af4 35.15%,
+      rgba(1, 90, 244, 0.557292) 56.53%,
+      rgba(1, 90, 244, 0) 88.32%
+    );
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes image-rotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  30% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}

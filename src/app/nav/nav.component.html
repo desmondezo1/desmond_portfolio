@@ -1,0 +1,24 @@
+<header>
+<div class="nav">
+    <a href="" [routerLink]="['']" routerLinkActive="router-link-active">
+        <Img class="logo" src="../../assets/img/toon.jpg">
+        </a>
+    <a href="mailto:desezo@gmail.com" class="email-link">
+        <Img class="email" src="../../assets/img/gmail-croped.png">
+       <!-- <span class="email-tooltip">desezo@gmail.com</span> -->
+    </a>
+</div>
+
+<section class="social-icons" *ngIf="loc == '/'">
+    <a href="https://github.com/desmondezo1"><Img class="github" src="../../assets/img/github.svg"></a>
+    <a href="https://codepen.io/Dezy_official"><Img class="codepen" src="../../assets/img/codepen.svg"></a>
+    <a href="https://dribbble.com/Dezy_Official"><Img class="dribbble" src="../../assets/img/dribbble.svg"></a>
+
+</section>
+
+<section class="bottom-nav" >
+    <a class="bottom-nav-links" [routerLink]="['/portfolio']" routerLinkActive="active" >Portfolio</a>
+    <a class="bottom-nav-links" [routerLink]="['/about']" routerLinkActive="active">About Me</a>
+    <a class="bottom-nav-links" target="blank" href="https://docs.google.com/viewer?url=https://docs.google.com/document/d/1fZz43NLawTeKOWzGBWCSFXfSgNehbnPd2THIPt6srsM/export?format=pdf"  >Resume</a>
+</section>
+</header>

@@ -1,0 +1,111 @@
+/* .container-wrapper{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content:center;
+} */
+
+.container {
+  /* width: 100%;
+  height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 14%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 8.12rem;
+  background: url("../../assets/img/img(81kb).jpg") no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  line-height: 140px;
+  position: relative;
+}
+
+h1::before {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  content: "Hi, \a"attr(data-line);
+  white-space: pre-line;
+  font-size: 8.12rem;
+  background: linear-gradient(rgba(1, 65, 174, 1), rgba(1, 65, 174, 0.14));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 2;
+  line-height: 140px;
+  position: absolute;
+  animation-name: animate-pseudo;
+  animation-duration: 1.5s;
+  animation-delay: 2300ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 42px;
+  color: #000000;
+}
+
+@keyframes animate-pseudo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* tablet mode  */
+
+@media screen and (min-width: 426px) and (max-width: 1024px){
+
+  h1, h1:before {
+    font-size: 4.82rem;
+    line-height: 110px;
+  }
+}
+
+/* large phone  */
+@media screen and (min-width: 321px) and (max-width: 425px){
+
+  h1, h1:before {
+    font-size: 2.42rem;
+    line-height: 60px;
+  }
+
+  h2{
+    font-size: 0.9rem;
+    line-height: 30px;
+  }
+
+
+}
+
+/* small screen  */
+@media screen and (max-width: 320px){
+  h1, h1:before {
+    font-size: 2.0rem;
+    line-height: 60px;
+  }
+
+  h2{
+    font-size: 0.8rem;
+    line-height: 30px;
+  }
+}

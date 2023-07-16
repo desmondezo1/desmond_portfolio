@@ -1,0 +1,296 @@
+.fullpage {
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y proximity;
+  /* scroll-snap-type: y mandatory; */
+  scroll-behavior: smooth;
+}
+
+.section  {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.bio {
+  height: 100vh;
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-column-gap: 20px;
+  justify-content: space-evenly;
+  grid-template:
+    ". about . image ."
+    ". skills . image ."
+    ". . . image .";
+}
+
+.about-me {
+  font-family: "Open Sans", sans-serif;
+  align-self: center;
+  grid-area: about;
+  width: 300px;
+  font-weight: 400;
+}
+.about-me-h1 {
+  margin: 20px 0;
+  color: #0141ae;
+}
+
+.skills {
+  grid-area: skills;
+  max-width: 70%;
+  height: 20px;
+  display: flex;
+}
+
+/* .skills ul {
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0 0 0 17px;
+  list-style: none;
+}
+
+.skills ul li {
+  margin: 5px 0;
+  font-family: 'Kalam', cursive;
+  list-style-image: url("../../assets/img/t.svg");
+  list-style-position: outside;
+} */
+
+.skills .container .skill_wrapper {
+  background-color: #1b6fff;
+  color: #EBF2FF;
+  /* height: 10px; */
+  padding: 6px 10px;
+  border-radius: 10px;
+  margin: 10px 5px;
+}
+
+.skills .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+div.img {
+  grid-area: image;
+  /* background: url("../../assets/img/img(81kb).jpg"); */
+  background: url("../../assets/img/desmond_profilepic.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 70%;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.work-history-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBF2FF;
+  position: relative;
+}
+
+.work-history-section .section-heading{
+  position: absolute;
+  font-family: 'Open Sans';
+  top: 4%;
+  color: #565656;
+}
+
+.work-history-section .wrapper{
+  margin: auto;
+  grid-template-columns: 0.5fr 1fr;
+  display: grid;
+  grid-column-gap: 20px;
+  width: 70%;
+}
+
+.work-history-section .wrapper .list{
+  background: #ebf2ff;
+  padding: 2px;
+}
+
+.work-history-section .wrapper .list .listitems .item{
+  background: #fff;
+  color: #015AF4;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.work-history-section .wrapper .list .listitems .item:hover{
+  background: #0141ae;
+  color: #EBF2FF;
+}
+
+.work-history-section .wrapper .display{
+  background: #fff;
+  border: 0.7px solid #015AF4;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.work-history-section .wrapper .display .work-details{
+  margin: 10px 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.work-history-section .wrapper .display .work-details .title-date-wrapper{
+  margin-bottom: 20px;
+}
+
+.work-history-section .wrapper .display .work-details h1{
+  color: #012665;
+  font-size: 1.5rem;
+}
+
+.work-history-section .wrapper .display .work-details h3{
+  color: #347EFE;
+  font-size: 1rem;
+}
+
+.work-history-section .wrapper .display .work-details .list-of-acheivements{
+  list-style-image: url("../../assets/img/arr.png");
+  list-style-position: outside;
+}
+.work-history-section .wrapper .display .work-details .list-of-acheivements ul li{
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+
+.my-education {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.my-education .section-heading{
+  position: absolute;
+  font-family: 'Open Sans';
+  color: #565656;
+  top: 4%;
+}
+
+.my-education .wrapper{
+  margin: auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 70%;
+}
+
+.my-education .wrapper .item{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  filter: drop-shadow(0px 0px 15px rgba(151, 151, 151, 0.25));
+  justify-content: center;
+  /* align-items: center; */
+  box-shadow: 0px 0px 15px rgba(151, 151, 151, 0.25);
+}
+
+.my-education .wrapper .item .date{
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 40px;
+  color: #347EFE;
+}
+
+.my-education .wrapper .item .school{
+  color: #012665;
+  font-weight: 700;
+  font-family: "Open Sans";
+  line-height: 35px;
+}
+
+.my-education .wrapper .item .course{
+  color: #023CA2;
+  font-family: "Open Sans";
+}
+
+/* laptop */
+@media screen and (min-width: 768px) and (max-height: 1023px) {
+
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) and (max-width: 767px){
+
+}
+
+/* large phone  */
+@media screen and (max-width: 425px){
+
+  h1, h2, .job-title{
+    font-size: 1.1rem;
+  }
+
+  .work-history-section .wrapper .display .work-details h1 {
+    color: #012665;
+    font-size: 1.1rem;
+}
+
+.work-history-section .wrapper .display .work-details h3 {
+    font-size: 0.8rem;
+}
+
+
+  .about-me{
+    width: 250px;
+  }
+
+  .bio {
+    height: 100vh;
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-column-gap: 20px;
+    justify-content: space-evenly;
+    grid-template:
+        ". about ."
+        ". image ."
+        ". skills ."
+        ". skills .";
+  }
+
+  .img{
+    display: none;
+  }
+
+  .about-me-h1{
+    text-align: center;
+  }
+
+  .work-history-section {
+    height: 150vh;
+  }
+
+  .work-history-section .wrapper {
+    margin: auto;
+    grid-template-columns: 1fr;
+    display: grid;
+    grid-column-gap: 20px;
+    width: 70%;
+  }
+
+}
+
+/* small screen  */
+@media screen and (max-width: 320px){
+
+}
+
+

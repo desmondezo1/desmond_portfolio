@@ -1,0 +1,49 @@
+.wrapper{
+  /* background: red; */
+  margin: 4%;
+  height: 100%;
+  padding: 3%;
+  min-height: 200vh;
+}
+
+.container{
+  /* background: green; */
+  height: 100%;
+}
+
+.container .heading{
+  /* background:blue; */
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container .heading h1{
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+}
+
+.container .content{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  justify-content: space-around;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.container .content .thumb-img{
+  background: grey;
+  width: 17%;
+  max-height: 160px;
+  min-height: 160px;
+  border-radius: 5px;
+  max-width: 17%;
+  margin: 20px 0px;
+  padding: 20px;
+  flex-grow: 1;
+}
