@@ -258,7 +258,7 @@ div.img {
     margin: auto;
     display: grid;
     grid-column-gap: 20px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     grid-template:
         ". about ."
         ". skills ."

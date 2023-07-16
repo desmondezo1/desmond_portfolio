@@ -33,6 +33,7 @@ h1 {
   position: relative;
 }
 
+
 h1::before {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
@@ -53,6 +54,35 @@ h1::before {
   animation-timing-function: ease;
 }
 
+
+@keyframes animate-pseudo {
+  0% {
+    opacity: 0;
+    background-image: none;
+  }
+  100% {
+    opacity: 1;
+    /* background: url("../../assets/img/img(81kb).jpg") no-repeat; */
+    /* background: linear-gradient(rgba(1, 65, 174, 1), rgba(1, 65, 174, 0.14));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+  }
+}
+
+
+
+
+
+
+
+
+
 h2 {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -62,14 +92,14 @@ h2 {
   color: #000000;
 }
 
-@keyframes animate-pseudo {
+/* @keyframes animate-pseudo {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
-}
+} */
 
 /* tablet mode  */
 

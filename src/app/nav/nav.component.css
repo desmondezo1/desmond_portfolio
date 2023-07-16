@@ -156,22 +156,28 @@ a.bottom-nav-links:hover::before {
   }
 }
 
-@keyframes social-icons {
-  to {
-    transform: translateX(-100px);
-  }
-}
-
 @keyframes bottom-nav {
   to {
     transform: translateY(100px);
   }
 }
 
+@media screen and (min-width: 1025px){
+  @keyframes social-icons {
+    to {
+      transform: translateX(-100px);
+    }
+  }
+}
 
 /* tablet mode  */
 
 @media screen and (min-width: 426px) and (max-width: 1024px){
+  @keyframes social-icons {
+    to {
+      transform: translateX(-100px);
+    }
+  }
 }
   /* large phone  */
   @media screen and (max-width: 425px){
