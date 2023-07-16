@@ -44,8 +44,8 @@ p{
 .skills {
   grid-area: skills;
   max-width: 70%;
-  height: 20px;
-  display: flex;
+  height: auto;
+  /* display: flex; */
 }
 
 /* .skills ul {
@@ -69,6 +69,11 @@ p{
   padding: 6px 10px;
   border-radius: 10px;
   margin: 10px 5px;
+  max-height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .skills .container {
